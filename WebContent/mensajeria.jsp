@@ -29,7 +29,7 @@
         <h4 id="tit_mensaje">Mensaje: </h4><input type="text"  class="form-control" id="mensaje" name="mensaje" /><br><br>     
         </div>
         <div id="botones">
-        <input type="submit" class="btn btn-primary" value="Enviar Mensaje" onclick="" id="registrar" name="accion" />
+        <input type="submit" class="btn btn-primary" value="Enviar Mensaje" onclick="return validarFormulario()" id="registrar" name="accion" />
         <a href="mensajes.jsp" class="btn btn-warning" id="volver">Ver Listado</a>
         <div>
         </form>

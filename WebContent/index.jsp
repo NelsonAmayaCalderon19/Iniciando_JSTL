@@ -8,7 +8,7 @@
         <!--<script src="http://code.jquery.com/jquery-1.12.0.js"></script> -->
         <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
-        <title>Registro</title>
+        <title>Login</title>
   <link href="css/style_index.css" rel="stylesheet">
     </head>
     <body>
@@ -18,7 +18,6 @@
         <h1>LOGIN</h1>
         <h4 id="tit_usuario">Usuario: </h4><input type="text"  class="form-control" id="usuario" name="usuario" /><br><br>
         <h4 id="tit_clave">Clave: </h4><input type="password"  class="form-control" id="clave" name="clave" /><br><br>
-     
         </div>
         <div id="botones">
         <input type="submit" class="btn btn-primary" value="Ingresar" onclick="return validarFormulario()" id="loguearme" name="accion" />
