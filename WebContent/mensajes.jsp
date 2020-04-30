@@ -8,6 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="icon" type="image/png" href="img/icono.png" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
@@ -29,7 +30,7 @@
 <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/alertify.min.js"></script>   
 
 <title>Listado de Mensajes</title>
-  <link href="css/style_mensajes.css" rel="stylesheet">
+  <link href="css/styles_mensajes.css" rel="stylesheet">
 </head>
 <body>
 <h1>Listado de Mensajes</h1>
@@ -41,6 +42,7 @@
 <tr>
 <th class="text-center">Nombre</th>
 <th class="text-center">Email</th>
+<th class="text-center">Mensaje</th>
 <th class="text-center">Usuario</th>
 <th class="text-center">Accion</th>
 </tr>
@@ -50,10 +52,12 @@
 <tr>
 <td><c:out value = "${m.nombre}"/></td>
 <td><c:out value = "${m.email}"/></td>
+<td><c:out value = "${m.mensaje }"/></td>
 <td><c:out value = "${m.usuario.usuario}"/></td>
 
-<td><a href="MensajeController?accion=eliminar&id=${m.id}">
-              Eliminar</a></td>
+<td>
+<a class="btn btn-warning" href="MensajeController?accion=editar&id=${m.id}"><span class="fa fa-pencil-square-o" style="color: white;"></span></a>
+<a class="btn btn-danger" href="MensajeController?accion=eliminar&id=${m.id}"><span class="fa fa-minus-circle" style="color: white;"></span></a></td>
 
 </tr>
 </c:forEach>

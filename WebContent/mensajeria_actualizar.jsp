@@ -14,24 +14,24 @@
         <script src="http://code.jquery.com/jquery-1.12.0.js"></script> 
         <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
-        <title>Nuevo Mensaje</title>
+        <title>Actualizar Mensajes</title>
   <link href="css/style_mensajeria.css" rel="stylesheet">
     </head>
     <body>
         <div id="contenido">
             <div id="campos">
         <form class="usuario" action="MensajeController?menu=Mensaje" method="POST" id="data" >
-       
-        <h1 id="titulo">Mensajeria</h1><input type="submit" class="btn btn-danger" value="Salir"  id="salir" name="accion" /><br><br>
-        <h4 id="tit_usuario">Usuario: </h4><input type="text"  class="form-control" id="usuario" value="<%=request.getSession().getAttribute("resultado").toString() %>" name="usuario" readonly="" /><br><br>
-        <h4 id="tit_nombre">Nombre: </h4><input type="text"  class="form-control" id="nombre" name="nombre" /><br><br>
-        <h4 id="tit_email">Email: </h4><input type="text"  class="form-control" id="email" name="email" /><br><br>
-         <h4 id="tit_website">Website: </h4><input type="text"  class="form-control" id="website" name="website" /><br><br>
-        <h4 id="tit_mensaje">Mensaje: </h4><input type="text"  class="form-control" id="mensaje" name="mensaje" /><br><br>     
+        <h1 id="titulo">Mensajeria - Actualización</h1><br><br>
+        <input type="text"  class="form-control" id="usuari" value="${dato.getId()}" name="id" readonly="" />
+        <h4 id="tit_usuario">Usuario: </h4><input type="text"  class="form-control" id="usuario" value="${dato.getUsuario().getUsuario()}" name="usuario"  /><br><br>
+        <h4 id="tit_nombre">Nombre: </h4><input type="text"  class="form-control" id="nombre" value="${dato.getNombre()}" name="nombre" /><br><br>
+        <h4 id="tit_email">Email: </h4><input type="text"  class="form-control" id="email" value="${dato.getEmail()}" name="email" /><br><br>
+         <h4 id="tit_website">Website: </h4><input type="text"  class="form-control" id="website" value="${dato.getWebsite()}" name="website" /><br><br>
+        <h4 id="tit_mensaje">Mensaje: </h4><input type="text"  class="form-control" id="mensaje" value="${dato.getMensaje()}" name="mensaje" /><br><br>
         </div>
         <div id="botones">
-        <input type="submit" class="btn btn-primary" value="Enviar Mensaje" onclick="return validarFormulario()" id="registrar" name="accion" />
-        <a href="mensajes.jsp" class="btn btn-warning" id="volver">Ver Listado</a>
+        <input type="submit" class="btn btn-primary" value="Actualizar Mensaje" onclick="return validarFormulario()" id="registrar" name="accion" />
+        <a href="mensajes.jsp" class="btn btn-warning" id="volver">Volver a Listado</a>
         <div>
         </form>
         </div>

@@ -3,6 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       <link rel="icon" type="image/png" href="img/icono.png" />
         <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         --><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!--<script src="http://code.jquery.com/jquery-1.12.0.js"></script> -->
@@ -16,8 +17,8 @@
             <div id="campos">
         <form class="mensaje" action="MensajeController?menu=Mensaje" method="POST" id="data" >
         <h1>LOGIN</h1>
-        <h4 id="tit_usuario">Usuario: </h4><input type="text"  class="form-control" id="usuario" name="usuario" /><br><br>
-        <h4 id="tit_clave">Clave: </h4><input type="password"  class="form-control" id="clave" name="clave" /><br><br>
+        <h4 id="tit_usuario">Usuario: </h4><input type="text"  class="form-control" id="usuario" name="usuario" placeholder="Ingresa tu Usuario" /><br><br>
+        <h4 id="tit_clave">Clave: </h4><input type="password"  class="form-control" id="clave" name="clave" placeholder="Ingresa tu Password" /><br><br>
         </div>
         <div id="botones">
         <input type="submit" class="btn btn-primary" value="Ingresar" onclick="return validarFormulario()" id="loguearme" name="accion" />
